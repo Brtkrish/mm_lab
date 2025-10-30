@@ -1,0 +1,14 @@
+1000 MOV SI, 3000   
+1003 MOV DI, 4000  
+1006 MOV AX, [SI]   
+1008 INC SI
+1009 INC SI         
+100A MOV BX, [SI]   
+100C SUB AX, BX     
+100E JNC 1015       
+1010 MOV [DI], 0001 
+1013 JMP 1018       
+1015 MOV [DI], 0000 
+1018 INC DI         
+1019 MOV [DI], AX   
+101B HLT            
